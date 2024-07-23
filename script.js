@@ -26,5 +26,22 @@ function initializeClock(id, endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
+function loadRandomGif() {
+    const apiKey = 'YOUR_GIPHY_API_KEY';
+    const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=love&rating=g`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const gifUrl = data.data.images.original.url;
+            const gifContainer = document.getElementById('gif-container');
+            const img = document.createElement('img');
+            img.src = gifUrl;
+            gifContainer.appendChild(img);
+        })
+        .catch(error => console.error('Error fetching GIF:', error));
+}
+
 const deadline = new Date(Date.parse('2024-07-24T19:00:00-06:00'));
 initializeClock('countdown', deadline);
+loadRandomGif();
