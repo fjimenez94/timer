@@ -25,3 +25,7 @@ h1 {
     font-size: 48px;
     color: #ff0000;
 }
+
+#gif-container {
+    margin-top: 20px;
+}
