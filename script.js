@@ -27,7 +27,7 @@ function initializeClock(id, endtime) {
 }
 
 function loadRandomGif() {
-    const apiKey = 'YOUR_GIPHY_API_KEY';
+    const apiKey = 'O1Kz0tkbECQsF25OgCCsX3IJtKqrDSoY';
     const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=love&rating=g`;
 
     fetch(url)
