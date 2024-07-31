@@ -42,6 +42,6 @@ function loadRandomGif() {
         .catch(error => console.error('Error fetching GIF:', error));
 }
 
-const deadline = new Date(Date.parse('2024-07-31T21:30:00-06:00'));
+const deadline = new Date(Date.parse('2024-07-31T20:30:00-06:00'));
 initializeClock('countdown', deadline);
 loadRandomGif();
